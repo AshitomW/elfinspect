@@ -336,3 +336,9 @@ Lazy evaluation is used for program header iteration through the `ProgramHeaderI
 Bounds checking is performed explicitly throughout the parser to handle malformed or truncated files gracefully. The `validate_bounds()` and `get_slice()` functions ensure that all memory accesses are safe and will return appropriate errors rather than panicking.
 
 Error handling uses Rust's `Result` type extensively, with the `thiserror` crate providing convenient derive macros for error enum definitions. Error messages include context about what operation was being performed when the error occurred, making debugging easier.
+
+## Contributing
+
+Contributions are welcome! Help improve the code quality by sending pull requests. Whether you're fixing bugs, adding features, improving documentation, or optimizing performance, your contributions are valuable to the project.
+
+Before submitting a PR, please ensure your code follows the existing style and patterns in the codebase. Test your changes thoroughly and provide a clear description of what your PR addresses.

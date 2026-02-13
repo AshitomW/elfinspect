@@ -2,8 +2,7 @@
 //!
 //! Analyzes ELF binaries for security-relevant properties.
 
-use super::header::ElfType;
-use super::program::{PF_R, PF_W, PF_X, has_bind_now};
+use super::program::has_bind_now;
 use super::{Elf, ProgramHeader, ProgramType};
 
 /// RELRO (Relocation Read-Only) status.

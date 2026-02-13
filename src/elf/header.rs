@@ -1,7 +1,7 @@
 //! ELF header parsing.
 
 use crate::errors::{ElfError, Result};
-use crate::utils::{ElfClass, Endianness, read_addr, read_u16, read_u32};
+use crate::utils::{ElfClass, Endianness, read_u16, read_u32};
 
 // ============================================================================
 // ELF Identification Constants (e_ident indices)
@@ -37,9 +37,6 @@ const ELF_MAGIC: [u8; 4] = [0x7f, b'E', b'L', b'F'];
 // ELF Class Values
 // ============================================================================
 
-/// Invalid class (0).
-const ELFCLASSNONE: u8 = 0;
-
 /// 32-bit ELF objects.
 const ELFCLASS32: u8 = 1;
 
@@ -49,9 +46,6 @@ const ELFCLASS64: u8 = 2;
 // ============================================================================
 // ELF Data Encoding Values
 // ============================================================================
-
-/// Invalid data encoding.
-const ELFDATANONE: u8 = 0;
 
 /// Little-endian encoding (LSB first).
 /// Used by x86, x86-64, ARM (usually), RISC-V.

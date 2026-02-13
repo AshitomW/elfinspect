@@ -44,16 +44,6 @@ pub enum ElfError {
         entry_size: u16,
     },
 
-    /// The section header table parameters are invalid.
-    #[error(
-        "Invalid section header table: offset={offset}, count={count}, entry_size={entry_size}"
-    )]
-    InvalidSectionHeaders {
-        offset: u64,
-        count: u16,
-        entry_size: u16,
-    },
-
     /// A string is not valid UTF-8.
     /// ELF paths (like the interpreter) should be valid UTF-8 in practice,
     /// though the spec technically allows arbitrary bytes.
